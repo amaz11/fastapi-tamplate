@@ -1,4 +1,5 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic import Field
 
 
 class Settings(BaseSettings):
@@ -10,8 +11,11 @@ class Settings(BaseSettings):
     fake_secret_key: str = "learning-secret"
     database_url: str = "mysql+pymysql://admin:StrongPassword123!@localhost/fastapi_db"
     database_track_modifications: bool = False
+    cors_origins: list[str] = Field(default_factory=lambda: ["*"])
+    cors_methods: list[str] = Field(default_factory=lambda: ["*"])
+    cors_headers: list[str] = Field(default_factory=lambda: ["*"])
 
-    model_config = SettingsConfigDict(env_file="env", env_file_encoding="utf-8")
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
 
 settings = Settings()

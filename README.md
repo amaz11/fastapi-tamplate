@@ -14,6 +14,12 @@ Or:
 python run.py
 ```
 
+Or:
+
+```bash
+fastapi dev run.py
+```
+
 ## Learn Flow
 
 1. Request enters `app/main.py`
