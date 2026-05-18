@@ -1,0 +1,12 @@
+target-version = "py312"
+line-length = 100
+
+[lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["B008"]
+
+[lint.per-file-ignores]
+"app/tests/*" = ["S101"]
+"scripts/*" = ["E402"]
+"app/utils/pagination.py" = ["UP046"]
+"alembic/*" = ["UP007", "UP035"]

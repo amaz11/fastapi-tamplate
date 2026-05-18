@@ -30,6 +30,7 @@ dist/
 *.egg-info/
 .eggs/
 *.db
+test.db
 
 # IDE files
 .vscode/

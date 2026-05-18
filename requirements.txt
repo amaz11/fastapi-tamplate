@@ -1,0 +1,17 @@
+# Core — install with: pip install -r requirements.txt
+fastapi>=0.136.0,<1.0.0
+uvicorn[standard]>=0.46.0,<1.0.0
+sqlalchemy>=2.0.0,<3.0.0
+alembic>=1.14.0,<2.0.0
+pydantic-settings>=2.14.0,<3.0.0
+email-validator>=2.0.0,<3.0.0
+python-dotenv>=1.0.0,<2.0.0
+httpx>=0.28.0,<1.0.0
+bcrypt>=4.0.0,<5.0.0
+python-jose[cryptography]>=3.3.0,<4.0.0
+
+# Optional: only when DATABASE_URL uses mysql+pymysql://
+pymysql>=1.1.0,<2.0.0
+
+# Dev / CI
+pytest>=8.0.0,<9.0.0
